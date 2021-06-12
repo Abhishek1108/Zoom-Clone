@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Zoom</title>
+ 
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="zoom-content">
+            <div class="chat-area hide">
+                <div class="chat-box">
+                    <div class="chat-icon"><i class="fas fa-comments"></i> Chat</div>
+                   <div class="message-area"></div>
+                   <div class="input-area">
+                   <input type="text" class="chat-input">
+                    
+                    </div> 
+                    </div>    
+            </div>
+            
+        </div>
+        <div class="zoom-options">
+            <div class="option1">
+                <div class="mute-unmute"><i class="fas fa-microphone-slash"></i>Mute</div>
+                 <div class="video-button"><i class="fas fa-video"></i>Pause Video</div>
+            </div>
+
+            <div class="option2">
+            <div class="chat-button"> <i class="fas fa-comment"></i> Chat</div>
+            <div class="share-screen"><i class="fas fa-desktop"></i>Share Screen</div>
+            <div class="invite-people"><i class="fas fa-user-plus"></i> Invite People</div>
+            </div>
+
+            <div class="option3">
+                <div class="end-metting"><div class="end-button">Leave</div></div>
+            </div>
+        
+
+            
+            
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js" integrity="sha512-iZIBSs+gDyTH0ZhUem9eQ1t4DcEn2B9lHxfRMeGQhyNdSUz+rb+5A3ummX6DQTOIs1XK0gOteOg/LPtSo9VJ+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+     var socket = io();
+    </script> 
+    <script  src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.2/peerjs.min.js.map"></script>
+    <script> const Room_id="<%= roomId %>"</script>
+
+    <script src="./script.js"></script>
+    <script src="./shareScreen.js"></script>
+    <script src="./chat.js"></script>
+    <script src="./invite.js"></script>
+</body>
+</html>
